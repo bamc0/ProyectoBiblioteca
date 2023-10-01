@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ClienteAjustes">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ajustes"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="salirClienteAjustes"
+            android:text="Volver al Menú" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Personalización de Notificaciones"
+        android:textSize="20sp" />
+
+    <CheckBox
+        android:id="@+id/cb1dias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="24 horas" />
+
+    <CheckBox
+        android:id="@+id/cb3dias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3 días" />
+
+    <CheckBox
+        android:id="@+id/cb7dias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 semana" />
+
+    <Button
+        android:id="@+id/aplicarNotifs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cambiarNotifs"
+        android:text="Aplicar" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cambiar Contraseña"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/nuevaContrasenna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/aplicarContrasenna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cambiarContrasenna"
+        android:text="Cambiar" />
+</LinearLayout>

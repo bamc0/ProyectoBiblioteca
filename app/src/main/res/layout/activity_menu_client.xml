@@ -36,12 +36,14 @@
                 android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:onClick="verDatos"
                 android:text="Ver Datos Personales" />
 
             <Button
                 android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="verPrestamos"
                 android:text="Ver Prestamos y Reservas" />
         </TableRow>
 
@@ -53,13 +55,9 @@
                 android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="verAjustes"
                 android:text="Ajustes" />
 
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Contactar a un funcionario" />
         </TableRow>
 
     </TableLayout>

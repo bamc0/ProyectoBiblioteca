@@ -19,4 +19,18 @@ public class MenuClient extends AppCompatActivity {
         startActivity(sig);
     }
 
+    public void verPrestamos(View v){
+        Intent sig = new Intent(this, ClientePrestamos.class);
+        startActivity(sig);
+    }
+
+    public void verDatos(View v){
+        Intent sig = new Intent(this, verDatos.class);
+        startActivity(sig);
+    }
+    public void verAjustes(View v){
+        Intent sig = new Intent(this, ClienteAjustes.class);
+        startActivity(sig);
+    }
+
 }
