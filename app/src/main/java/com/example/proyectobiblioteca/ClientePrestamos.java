@@ -1,4 +1,4 @@
-/*package com.example.proyectobiblioteca;
+package com.example.proyectobiblioteca;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -34,8 +34,8 @@ public class ClientePrestamos extends AppCompatActivity {
         startActivity(sig);
     }
 
-    private List<Prestamo> getData(){
+    private List<Libro> getData(){
 
     }
 
-}*/
+}
