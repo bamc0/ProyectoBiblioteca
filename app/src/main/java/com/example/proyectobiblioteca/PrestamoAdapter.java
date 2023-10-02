@@ -31,7 +31,7 @@ public class PrestamoAdapter extends RecyclerView.Adapter<PrestamoAdapter.ItemVi
     @NonNull
     @Override
     public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item,parent,false));
+        return new ItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.prestamo_item,parent,false));
     }
 
     @Override
@@ -67,7 +67,7 @@ public class PrestamoAdapter extends RecyclerView.Adapter<PrestamoAdapter.ItemVi
             imageView = itemView.findViewById(R.id.image_list);
             tituloText = itemView.findViewById(R.id.titulo_list);
             autorText = itemView.findViewById(R.id.autor_list);
-            estadoText = itemView.findViewById(R.id.estado_list);
+            estadoText = itemView.findViewById(R.id.layout);
 
         }
     }
