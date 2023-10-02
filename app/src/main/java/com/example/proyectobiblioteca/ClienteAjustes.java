@@ -28,7 +28,7 @@ public class ClienteAjustes extends AppCompatActivity {
     }
 
     public void salirClienteAjustes(View v){
-        Intent sig = new Intent(this, ClientePrestamos.class);
+        Intent sig = new Intent(this, MenuClient.class);
         startActivity(sig);
     }
 
