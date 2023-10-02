@@ -19,4 +19,17 @@ public class MenuAdmin extends AppCompatActivity {
         startActivity(sig);
     }
 
+    public void irAnnadirLibros(View v){
+        Intent sig = new Intent(this, annadirLibros.class);
+        startActivity(sig);
+    }
+    public void irAnnadirSocios(View v){
+        Intent sig = new Intent(this, annadirSocios.class);
+        startActivity(sig);
+    }
+    public void irAnnadirPrestamos(View v){
+        Intent sig = new Intent(this, annadirPrestamos.class);
+        startActivity(sig);
+    }
+
 }
