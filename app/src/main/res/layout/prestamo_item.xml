@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/layout"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -11,8 +16,9 @@
 
         <ImageView
             android:id="@+id/image_list"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_margin="10dp"
             android:layout_weight="1"
             android:src="@color/black" />
 
@@ -26,7 +32,9 @@
                 android:id="@+id/titulo_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/autor_list"
@@ -34,11 +42,15 @@
                 android:layout_height="wrap_content"
                 android:text="TextView" />
 
-            <TextView
-                android:id="@+id/estado_list"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="TextView" />
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/estado_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:layout_gravity="center"/>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
