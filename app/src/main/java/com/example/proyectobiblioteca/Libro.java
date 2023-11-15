@@ -1,7 +1,6 @@
 package com.example.proyectobiblioteca;
 
 import androidx.annotation.NonNull;
-import androidx.room.Entity;
 
 public class Libro {
     private int imagen;
