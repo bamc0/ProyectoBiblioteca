@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "542145154517",
+    "firebase_url": "https://asdasf-f8523-default-rtdb.firebaseio.com",
+    "project_id": "asdasf-f8523",
+    "storage_bucket": "asdasf-f8523.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542145154517:android:cb9210463abe2269ae415c",
+        "android_client_info": {
+          "package_name": "com.example.proyectobiblioteca"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCL9DFjjlUMVzA_xX55Am6jSqZw8-4q_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

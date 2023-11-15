@@ -3,7 +3,6 @@ package com.example.proyectobiblioteca;
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 
-@Entity
 public class Libro {
     private int imagen;
     private String titulo;
