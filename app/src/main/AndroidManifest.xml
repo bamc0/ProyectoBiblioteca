@@ -24,9 +24,6 @@
             android:name=".annadirLibros"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
             android:name=".ClienteAjustes"
             android:exported="false" />
         <activity
