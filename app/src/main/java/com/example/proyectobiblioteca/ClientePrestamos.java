@@ -39,7 +39,7 @@ public class ClientePrestamos extends AppCompatActivity {
     private List<Prestamo> getData(){
         List<Prestamo> prestamos = new ArrayList<>();
         Libro libro1 = new Libro(R.drawable.placeholderportada, "titulo 1", "autor 1");
-        Socio socio1 = new Socio("123456789", "Socio1");
+        Socio socio1 = new Socio("123456789", "Socio1", "qwerty");
         Libro libro2 = new Libro(R.drawable.placeholderportada, "titulo 2", "autor 2");
         Libro libro3 = new Libro(R.drawable.placeholderportada, "titulo 3", "autor 3");
         Libro libro4 = new Libro(R.drawable.placeholderportada, "titulo 4", "autor 4");
