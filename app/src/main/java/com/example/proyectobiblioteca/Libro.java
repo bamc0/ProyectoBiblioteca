@@ -23,7 +23,7 @@ public class Libro {
 
     public Libro(int imagen, String titulo, String autor){
         this.imagen = imagen;
-        this.titulo=titulo;
+        this.titulo =titulo;
         this.autor = autor;
     }
 
