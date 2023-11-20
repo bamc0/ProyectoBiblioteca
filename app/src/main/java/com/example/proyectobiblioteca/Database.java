@@ -2,6 +2,7 @@ package com.example.proyectobiblioteca;
 
 import android.app.Application;
 import android.content.Context;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -24,18 +25,17 @@ public class Database {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference();
     }
-    private static Database getDatabase(Context context){
+    public static Database getDatabase(Context context){
         if (database == null){
             database = new Database(context);
         }
         return database;
     }
 
-    // HACER TODOS LOS OTROS MÉTODOS ESTÁTICOS
 
-    public static boolean insertLibro(Context context, Libro libro){
+    public boolean insertLibro(Libro libro){
         try {
-        getDatabase(context).databaseReference.child("Libro").child(libro.getUuid()).setValue(libro);
+        databaseReference.child("Libro").child(libro.getUuid()).setValue(libro);
         return true;
         } catch (Exception e){
             return false;
@@ -43,9 +43,9 @@ public class Database {
     }
 
 
-    public static List<Libro> selectLibros(Context context){
+    public List<Libro> selectLibros(){
         List<Libro> libroList = new ArrayList<>();
-        getDatabase(context).databaseReference.child("Libro").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Libro").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 libroList.clear();
@@ -64,9 +64,9 @@ public class Database {
     }
 
 
-    public static boolean insertSocio(Context context, Socio socio){
+    public boolean insertSocio(Socio socio){
         try {
-            getDatabase(context).databaseReference.child("Socio").child(socio.getUuid()).setValue(socio);
+            databaseReference.child("Socio").child(socio.getUuid()).setValue(socio);
             return true;
         } catch (Exception e){
             return false;
@@ -74,9 +74,9 @@ public class Database {
     }
 
 
-    public static List<Socio> selectSocios(Context context){
+    public List<Socio> selectSocios(){
         List<Socio> socioList = new ArrayList<>();
-        getDatabase(context).databaseReference.child("Socio").addValueEventListener(new ValueEventListener() {
+        databaseReference.child("Socio").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 socioList.clear();

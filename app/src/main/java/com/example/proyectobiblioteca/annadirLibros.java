@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -30,16 +31,26 @@ public class annadirLibros extends AppCompatActivity {
     }
 
     public void ingresarLibros(View c){
-        if (inputTituloInsert.getText().length()==0 || inputAutorInsert.getText().length()==0){
-            Toast.makeText(annadirLibros.this, "Título y autor son campos requeridos", Toast.LENGTH_SHORT).show();
-        } else {
-            Libro l = new Libro();
-            l.setTitulo(inputTituloInsert.getText().toString());
-            l.setAutor(inputAutorInsert.getText().toString());
-            l.setImagen(R.drawable.placeholderportada);
-            l.setUuid(UUID.randomUUID().toString());
-            Database.insertLibro(getApplicationContext(),l);
+        try{
+            if (inputTituloInsert.getText().length()==0 || inputAutorInsert.getText().length()==0){
+                Toast.makeText(annadirLibros.this, "Título y autor son campos requeridos", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(annadirLibros.this, "Ingreso ELSE", Toast.LENGTH_SHORT).show();
+                Libro l = new Libro();
+                l.setTitulo(inputTituloInsert.getText().toString());
+                l.setAutor(inputAutorInsert.getText().toString());
+                l.setImagen(R.drawable.placeholderportada);
+                l.setUuid(UUID.randomUUID().toString());
+                boolean res = Database.getDatabase(getApplicationContext()).insertLibro(l);
+                if (res == true){
+                    Toast.makeText(annadirLibros.this, "Valor insertado", Toast.LENGTH_SHORT).show();
+                } else
+                    Toast.makeText(annadirLibros.this, "Valor no insertado", Toast.LENGTH_SHORT).show();
+            }
+        }catch(Exception e){
+            Toast.makeText(annadirLibros.this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
+
     }
 
 }
