@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView1900" />
 
     <EditText
-        android:id="@+id/editTextText00"
+        android:id="@+id/inputAnnadirSocioNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView1800" />
 
     <EditText
-        android:id="@+id/editTextText200"
+        android:id="@+id/inputAnnadirSocioRut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
@@ -66,7 +66,7 @@
         android:ems="10"
         android:inputType="text"
         app:layout_constraintStart_toEndOf="@+id/textView2000"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText00" />
+        app:layout_constraintTop_toBottomOf="@+id/inputAnnadirSocioNombre" />
 
     <Button
         android:id="@+id/button1300"
@@ -76,6 +76,6 @@
         android:text="Ingresar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText200" />
+        app:layout_constraintTop_toBottomOf="@+id/inputAnnadirSocioRut" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
