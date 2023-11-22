@@ -36,4 +36,12 @@ public class Socio {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Socio() {
+    }
 }
+

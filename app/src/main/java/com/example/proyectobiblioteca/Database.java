@@ -94,5 +94,33 @@ public class Database {
         return socioList;
     }
 
+    public boolean insertPrestamo(Prestamo prestamo){
+        try {
+            databaseReference.child("Prestamo").child(prestamo.getUuid()).setValue(prestamo);
+            return true;
+        } catch (Exception e){
+            return false;
+        }
+    }
+    public List<Prestamo> selectPrestamos(){
+        List<Prestamo> prestamoList = new ArrayList<>();
+        databaseReference.child("Prestamo").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                prestamoList.clear();
+                for (DataSnapshot objSnapshot : snapshot.getChildren()){
+                    Prestamo p = objSnapshot.getValue(Prestamo.class);
+                    prestamoList.add(p);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                prestamoList.clear();            }
+        });
+        return prestamoList;
+    }
+
 }
 
