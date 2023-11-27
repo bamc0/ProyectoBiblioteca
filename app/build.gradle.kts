@@ -31,6 +31,7 @@ android {
 
 dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.5.0"))
+    implementation ("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.2.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
