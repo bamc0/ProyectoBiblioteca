@@ -16,7 +16,7 @@ public class MqttHandler {
         private String usuario = "androidteststiqq";
         private String password = "W0U2XNxCKinXaOBv";
 
-        public void connect(String brokerUrl, String clientId) {
+        public void connect(String brokerUrl, String clientId, Context context) {
             try {
                 // persistencia de datos
                 MemoryPersistence persistence = new MemoryPersistence();
@@ -41,7 +41,7 @@ public class MqttHandler {
                         // Este método se llama cuando se recibe un mensaje en el tema suscrito
                         String messageText = new String(message.getPayload());
                         // Muestra el mensaje con un Toast
-                        Toast.makeText(,messageText, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,messageText, Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

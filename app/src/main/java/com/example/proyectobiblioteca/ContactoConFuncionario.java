@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class ContactoConFuncionario extends AppCompatActivity {
-    private static final String BROKER_URL = "tcp://your-broker-url:1883";
+    private static final String BROKER_URL = "mqtt://androidteststiqq.cloud.shiftr.io:1883";
     private static final String CLIENT_ID = "BAMC";
     private MqttHandler mqttHandler;
 
@@ -23,7 +23,7 @@ public class ContactoConFuncionario extends AppCompatActivity {
         inputTopico = (EditText) findViewById(R.id.inputTopico);
         inputMensaje = (EditText) findViewById(R.id.inputMensaje);
         mqttHandler = new MqttHandler();
-        mqttHandler.connect(BROKER_URL,CLIENT_ID);
+        mqttHandler.connect(BROKER_URL,CLIENT_ID,this);
         subscribeToTopic("biblioteca");
     }
 
