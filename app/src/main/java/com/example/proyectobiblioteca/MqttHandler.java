@@ -1,4 +1,10 @@
 package com.example.proyectobiblioteca;
+import android.content.Context;
+import android.widget.Toast;
+
+import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
+import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -24,6 +30,25 @@ public class MqttHandler {
                 MqttConnectOptions connectOptions = new MqttConnectOptions();
                 connectOptions.setCleanSession(true);
 
+                client.setCallback(new MqttCallback() {
+                    @Override
+                    public void connectionLost(Throwable cause) {
+                        // Manejar pérdida de conexión
+                    }
+
+                    @Override
+                    public void messageArrived(String topic, MqttMessage message) throws Exception {
+                        // Este método se llama cuando se recibe un mensaje en el tema suscrito
+                        String messageText = new String(message.getPayload());
+                        // Muestra el mensaje con un Toast
+                        Toast.makeText(,messageText, Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void deliveryComplete(IMqttDeliveryToken token) {
+
+                    }
+                });
                 // Conectar al broker
                 client.connect(connectOptions);
             } catch (MqttException e) {

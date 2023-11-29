@@ -32,5 +32,9 @@ public class MenuClient extends AppCompatActivity {
         Intent sig = new Intent(this, ClienteAjustes.class);
         startActivity(sig);
     }
+    public void verContacto(View v){
+        Intent sig = new Intent(this, ContactoConFuncionario.class);
+        startActivity(sig);
+    }
 
 }

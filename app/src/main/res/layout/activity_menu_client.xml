@@ -58,6 +58,13 @@
                 android:onClick="verAjustes"
                 android:text="Ajustes" />
 
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="verContacto"
+                android:text="Contactar funcionario" />
+
         </TableRow>
 
     </TableLayout>
