@@ -1,9 +1,10 @@
-package proyectoBiblioteca.proyectobiblioteca;
+package com.example.proyectobiblioteca;
 import android.content.Context;
 import android.widget.Toast;
 
 import org.eclipse.paho.client.mqttv3.IMqttDeliveryToken;
 import org.eclipse.paho.client.mqttv3.MqttCallback;
+import org.eclipse.paho.client.mqttv3.MqttCallbackExtended;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
@@ -12,7 +13,11 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 public class MqttHandler {
         private MqttClient client;
-        private String usuario = "androidteststiqq";
+
+    public MqttHandler() {
+    }
+
+    private String usuario = "androidteststiqq";
         private String password = "W0U2XNxCKinXaOBv";
 
         public void connect(String brokerUrl, String clientId, Context context) {
@@ -29,6 +34,9 @@ public class MqttHandler {
                 MqttConnectOptions connectOptions = new MqttConnectOptions();
                 connectOptions.setCleanSession(true);
 
+
+                // Conectar al broker
+                client.connect(connectOptions);
                 client.setCallback(new MqttCallback() {
                     @Override
                     public void connectionLost(Throwable cause) {
@@ -48,8 +56,6 @@ public class MqttHandler {
 
                     }
                 });
-                // Conectar al broker
-                client.connect(connectOptions);
             } catch (MqttException e) {
                 e.printStackTrace();
             }

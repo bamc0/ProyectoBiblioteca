@@ -1,13 +1,11 @@
-package proyectoBiblioteca.proyectobiblioteca;
+package com.example.proyectobiblioteca;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.proyectobiblioteca.R;
 
 public class ContactoConFuncionario extends AppCompatActivity {
     private static final String BROKER_URL = "mqtt://androidteststiqq.cloud.shiftr.io:1883";
@@ -22,11 +20,15 @@ public class ContactoConFuncionario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacto_con_funcionario);
 
+        Toast.makeText(this, "Pre Mqtt()", Toast.LENGTH_SHORT);
         inputTopico = (EditText) findViewById(R.id.inputTopico);
         inputMensaje = (EditText) findViewById(R.id.inputMensaje);
         mqttHandler = new MqttHandler();
+        Toast.makeText(this, "Post Mqtt()", Toast.LENGTH_SHORT);
         mqttHandler.connect(BROKER_URL,CLIENT_ID,this);
-        subscribeToTopic("biblioteca");
+        Toast.makeText(this, "Post connect()", Toast.LENGTH_SHORT);
+
+
     }
 
     @Override

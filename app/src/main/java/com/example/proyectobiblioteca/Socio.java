@@ -1,4 +1,4 @@
-package proyectoBiblioteca.proyectobiblioteca;
+package com.example.proyectobiblioteca;
 
 public class Socio {
 

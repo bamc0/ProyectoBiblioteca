@@ -1,6 +1,8 @@
-package proyectoBiblioteca.proyectobiblioteca;
+package com.example.proyectobiblioteca;
 
+import android.app.Application;
 import android.content.Context;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 

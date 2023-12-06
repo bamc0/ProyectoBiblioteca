@@ -1,14 +1,13 @@
-package proyectoBiblioteca.proyectobiblioteca;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
+package com.example.proyectobiblioteca;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.proyectobiblioteca.R;
+import android.content.Intent;
+import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.UUID;
 

@@ -1,14 +1,12 @@
-package proyectoBiblioteca.proyectobiblioteca;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
+package com.example.proyectobiblioteca;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.proyectobiblioteca.R;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
